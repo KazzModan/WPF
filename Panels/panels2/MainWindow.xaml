@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:panels2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="745.2" Width="800">
-    <DockPanel >
+        Title="MainWindow" Height="848.4" Width="682.4" WindowStartupLocation="CenterScreen">
+    <DockPanel>
         <DockPanel DockPanel.Dock="Top" Background="Black"  LastChildFill="False">
             <Button DockPanel.Dock="Left" Height="25" Width="25" Background="Blue"></Button>
             <TextBlock DockPanel.Dock="Left" Foreground="White" Margin="5,5,20,0">Office 365</TextBlock>
@@ -32,7 +32,6 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-
                 </Grid.ColumnDefinitions>
                 <TextBlock  Grid.ColumnSpan="5" FontSize="16" FontWeight="Bold">Купи сало 90% знижки</TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="0" >Купи</TextBlock>
@@ -60,30 +59,50 @@
             <Button Padding="10,0" DockPanel.Dock="Right" Background="Blue" Foreground="White">Edit</Button>
             <TextBlock DockPanel.Dock="Right" Margin="10,0">Published</TextBlock>
         </DockPanel>
+        <WrapPanel DockPanel.Dock="Bottom" Margin="40,0,10,50">
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+            <Button Height="50" Width="100" Margin="10" >sss</Button>
+
+
+        </WrapPanel>
+        <DockPanel DockPanel.Dock="Bottom">
+            <TextBlock Foreground="Gray" FontSize="17" Margin="50,30,10,10">Image gallery</TextBlock>
+        </DockPanel>
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="159*" ></ColumnDefinition>
-                <ColumnDefinition Width="79*"></ColumnDefinition>
-                <ColumnDefinition Width="317.6"></ColumnDefinition>
+                <ColumnDefinition  ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition ></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Border Background="Azure" Height="200" Grid.Column="2">
+            <Border Background="Azure" Grid.Column="2">
                 <TextBlock TextWrapping="Wrap" FontSize="23">121221212112122112121212313213213213EWSDAASDSDD2312122</TextBlock>
             </Border>
             <Image Source="image.jpg" Stretch="Fill" Grid.ColumnSpan="2" ></Image>
-            <Border Background="Azure" Height="200" Grid.Row="1" >
+            <Border Background="Azure" Grid.Row="1" >
                 <TextBlock TextWrapping="Wrap" FontSize="23">121221212112122112121212313213213213EWSDAASDSDD2312122</TextBlock>
             </Border>
             <Image Source="image.jpg" Stretch="Fill" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" ></Image>
-            <Border Background="Azure" Grid.Row="2"  Height="200" Grid.Column="2">
+            <Border Background="Azure" Grid.Row="2" Grid.Column="2">
                 <TextBlock TextWrapping="Wrap" FontSize="23">121221212112122112121212313213213213EWSDAASDSDD2312122</TextBlock>
             </Border>
             <Image Source="image.jpg" Stretch="Fill" Grid.Row="2" Grid.ColumnSpan="2" ></Image>
         </Grid>
-       
+
     </DockPanel>
 </Window>

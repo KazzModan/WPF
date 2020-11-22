@@ -1,2 +1,5 @@
 .vs/
-Panels/
+Panels/.vs
+Panels/Panels
+Controls/.vs
+.gitignore
