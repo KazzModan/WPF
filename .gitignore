@@ -1,5 +1,7 @@
-.vs/
-Panels/panels2/.vs/
+.vs
+
+Panels/panels2/bin/
+Panels/panels2/obg/
 Panels/Panels/
 Controls/.vs
 
