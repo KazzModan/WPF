@@ -28,16 +28,13 @@ namespace task01
             lBox.ItemsSource = model.colors;
             this.DataContext = model;
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            model.Add();
-        }
-        private void lBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            model.BorderColor.A = model.colors[lBox.SelectedIndex].A;
-            model.BorderColor.R = model.colors[lBox.SelectedIndex].R;
-            model.BorderColor.G = model.colors[lBox.SelectedIndex].G;
-            model.BorderColor.B = model.colors[lBox.SelectedIndex].B;
-        }
+     
+        //private void lBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    model.BorderColor.A = model.colors[lBox.SelectedIndex].A;
+        //    model.BorderColor.R = model.colors[lBox.SelectedIndex].R;
+        //    model.BorderColor.G = model.colors[lBox.SelectedIndex].G;
+        //    model.BorderColor.B = model.colors[lBox.SelectedIndex].B;
+        //}
     }
 }

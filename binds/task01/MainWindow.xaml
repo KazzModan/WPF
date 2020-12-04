@@ -24,11 +24,13 @@
     <UniformGrid Rows="2">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
+                <RowDefinition Height="26*"/>
+                <RowDefinition Height="19*"></RowDefinition>
+                <RowDefinition Height="16*"/>
+                <RowDefinition Height="34*"></RowDefinition>
+                <RowDefinition Height="35*"></RowDefinition>
+                <RowDefinition Height="70*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -37,29 +39,29 @@
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="4*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock Style="{StaticResource tbStyle}" Grid.Row="0" >A:</TextBlock>
-            <TextBlock Style="{StaticResource tbStyle}" Grid.Row="1" >R:</TextBlock>
-            <TextBlock Style="{StaticResource tbStyle}" Grid.Row="2" >G:</TextBlock>
-            <TextBlock Style="{StaticResource tbStyle}" Grid.Row="3" >B:</TextBlock>
-            <Slider  x:Name="aSl" Value="{Binding Path=BorderColor.A}"  Style="{StaticResource slStyle}" Grid.ColumnSpan="2" Margin="0,5" Height="Auto" ></Slider>
-            <Slider  x:Name="rSl"  Value="{Binding Path=BorderColor.R ,Mode=TwoWay}" Grid.Row="1" Style="{StaticResource slStyle}" Grid.ColumnSpan="2" Margin="0,5" Height="Auto" ></Slider>
-            <Slider  x:Name="gSl"  Value="{Binding Path=BorderColor.G ,Mode=TwoWay}" Grid.Row="2" Style="{StaticResource slStyle}" Grid.ColumnSpan="2" Margin="0,5" Height="Auto" ></Slider>
-            <Slider  x:Name="bSl"  Value="{Binding Path=BorderColor.B ,Mode=TwoWay}" Grid.Row="3" Style="{StaticResource slStyle}" Grid.ColumnSpan="2" Margin="0,5" Height="Auto" ></Slider>
-            <TextBlock Style="{StaticResource tbStyle}" Text="{Binding ElementName=aSl, Path=Value }" Grid.Row="0" Grid.Column="3"></TextBlock>
-            <TextBlock Style="{StaticResource tbStyle}" Text="{Binding ElementName=rSl, Path=Value }" Grid.Row="1" Grid.Column="3"></TextBlock>
-            <TextBlock Style="{StaticResource tbStyle}" Text="{Binding ElementName=gSl, Path=Value }" Grid.Row="2" Grid.Column="3"></TextBlock>
-            <TextBlock Style="{StaticResource tbStyle}" Text="{Binding ElementName=bSl, Path=Value }" Grid.Row="3" Grid.Column="3"></TextBlock>
-            <Border BorderBrush="Black" BorderThickness="3" x:Name ="Bord"  CornerRadius="10" Grid.Column="4" Margin="10" Grid.RowSpan="4" >
+            <TextBlock Style="{StaticResource tbStyle}" Grid.Row="1" Margin="10,0.948,0,18.4" Grid.RowSpan="2" >A:</TextBlock>
+            <TextBlock Style="{StaticResource tbStyle}" Grid.Row="2" Margin="10,9.8,0,0.4" Grid.RowSpan="2" >R:</TextBlock>
+            <TextBlock Style="{StaticResource tbStyle}" Grid.Row="4" Margin="10,9.6,0,0" >G:</TextBlock>
+            <TextBlock Style="{StaticResource tbStyle}" Grid.Row="5" Margin="10,10,0,68.6" Grid.RowSpan="2" >B:</TextBlock>
+            <Slider  x:Name="aSl" Value="{Binding Path=BorderColor.A}"  Style="{StaticResource slStyle}" Grid.ColumnSpan="3" Margin="0,5,87.6,5.2" Height="Auto" Grid.RowSpan="2" ></Slider>
+            <Slider  x:Name="rSl"  Value="{Binding Path=BorderColor.R }" Grid.Row="2" Style="{StaticResource slStyle}" Grid.ColumnSpan="3" Margin="0,4.8,87.6,5.4" Height="Auto" Grid.RowSpan="2" ></Slider>
+            <Slider  x:Name="gSl"  Value="{Binding Path=BorderColor.G }" Grid.Row="4" Style="{StaticResource slStyle}" Grid.ColumnSpan="3" Margin="0,4.6,87.6,5" Height="Auto" ></Slider>
+            <Slider  x:Name="bSl"  Value="{Binding Path=BorderColor.B }" Grid.Row="5" Style="{StaticResource slStyle}" Grid.ColumnSpan="3" Margin="0,5,87.6,5.2" Height="Auto" ></Slider>
+            <TextBlock Style="{StaticResource tbStyle}" Text="{Binding ElementName=aSl, Path=Value }" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="10.4,0.948,175.6,18.4" Grid.RowSpan="2"></TextBlock>
+            <TextBlock Style="{StaticResource tbStyle}" Text="{Binding ElementName=rSl, Path=Value }" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Margin="10.4,9.8,175.6,0.4" Grid.RowSpan="2"></TextBlock>
+            <TextBlock Style="{StaticResource tbStyle}" Text="{Binding ElementName=gSl, Path=Value }" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Margin="10.4,9.6,175.6,0"/>
+            <TextBlock Style="{StaticResource tbStyle}" Text="{Binding ElementName=bSl, Path=Value }" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Margin="10.4,10,175.6,68.6" Grid.RowSpan="2"></TextBlock>
+            <Border BorderBrush="Black" BorderThickness="3" x:Name ="Bord"  CornerRadius="10" Grid.Column="4" Margin="10.4,0.948,9.6,10.2" Grid.RowSpan="5" Grid.Row="1" >
                 <Border.Background>
                     <SolidColorBrush Color="{Binding Path=BorderColor.Color}"></SolidColorBrush>
                 </Border.Background>
             </Border>
-            <Button Grid.Row="4" Height="30" Width="100" Grid.Column="1" Click="Button_Click">Add Color</Button>
-            <Button Grid.Row="4" Height="30" Width="100" Grid.Column="2" Click="Button_Click">Add Color</Button>
+            <Button Command="{Binding Path=AddCommand}" Grid.Row="6" Height="30" Width="100" Grid.Column="1" Margin="60,20.8,60.8,19.6">Add Color</Button>
+            <Button Command="{Binding Path=RemoveCommand}" Grid.Row="6" Height="30" Width="100" Grid.Column="2" Margin="60.2,20.8,60.6,19.6">Add Color</Button>
         </Grid>
-        <ListBox x:Name="lBox" SelectedItem="{Binding Path=SelectedColor, Mode=TwoWay}" SelectionChanged="lBox_SelectionChanged">
+        <ListBox x:Name="lBox" SelectedItem="{Binding Path=SelectedColor, Mode=TwoWay}" >
             <ListBox.ItemTemplate>
-            <DataTemplate>
+                <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
@@ -72,7 +74,7 @@
                             </Border.Background>
                         </Border>
                     </Grid>
-            </DataTemplate>
+                </DataTemplate>
             </ListBox.ItemTemplate>
 
         </ListBox>

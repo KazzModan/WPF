@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CommandImplementation
+namespace task01
 {
     internal sealed class DelegateCommand : Command
     {

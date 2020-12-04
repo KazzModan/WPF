@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace CommandImplementation
+namespace task01
 {
     internal abstract class Command : ICommand
     {
